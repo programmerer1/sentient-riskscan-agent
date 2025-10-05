@@ -19,7 +19,7 @@ mkdir db_data
 docker compose -f docker-compose.yml up -d
 ```
 
-**Example POST request to http://localhost:8000/assist: Please note that the network must be specified in the prompt so that the agent understands which network to search for the wallet data in.**
+**Example POST request to localhost:8000/assist: Please note that the network must be specified in the prompt so that the agent understands which network to search for the wallet data in.**
 ```bash
 {
     "session": 
