@@ -2,7 +2,7 @@
 
 **RiskScan** is an intelligent agent built on the [Sentient Agent Framework](https://github.com/sentient-agi/Sentient-Agent-Framework) for rapid blockchain risk assessment.
 
-It takes a wallet address and immediately scans its history to identify links with suspicious, fraudulent, or criminal transactions (AML/CTF). It instantly provides a risk level and a report to safeguard your financial operations.
+It takes a wallet address and scans its history to identify links with suspicious, fraudulent, or criminal transactions (AML/CTF). It provides a risk level and a report to safeguard your financial operations.
 
 ## Installation
 Clone the repository
