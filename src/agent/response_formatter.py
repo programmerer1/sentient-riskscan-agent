@@ -30,6 +30,7 @@ Requirements:
   * Any tags, labels, or sanctions flags
 - Provide a short explanation of what the risk score means for a regular user.
 - **IMPORTANT**: Do NOT output raw JSON. Only text, only human-friendly insights.
+- Always add a list of sources and the following text at the end: This report is for informational purposes only and does not constitute legal or financial advice. Always conduct due diligence when interacting with blockchain addresses.
 
 ---
 

@@ -60,8 +60,9 @@ class Agent(AbstractAgent):
                 if anchain_result:
                     result['anchain_data'] = anchain_result
 
+                await self.mysql_cache.set(cache_key, json.dumps(result, indent=2))
+                
             result = json.dumps(result, indent=2)
-            await self.mysql_cache.set(cache_key, result)
             report = await self.formatter.format(network, address, result, prompt)
 
             await response_handler.respond("response", report)
