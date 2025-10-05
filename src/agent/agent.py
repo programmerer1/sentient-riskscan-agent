@@ -63,7 +63,6 @@ class Agent(AbstractAgent):
                 await self.mysql_cache.set(cache_key, json.dumps(result))
 
             report = await self.formatter.format(network, address, json.dumps(result, indent=2), prompt)
-
             await response_handler.respond("response", report)
         except Exception as exc:
             logger.error("Something went wrong.", exc_info=True)
