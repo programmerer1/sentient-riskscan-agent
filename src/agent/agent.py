@@ -61,13 +61,13 @@ class Agent(AbstractAgent):
                     result['anchain_data'] = anchain_result
 
                 await self.mysql_cache.set(cache_key, json.dumps(result, indent=2))
-                
+
             result = json.dumps(result, indent=2)
             report = await self.formatter.format(network, address, result, prompt)
 
             await response_handler.respond("response", report)
         except Exception as exc:
-            logger.error("Respond call failed unexpectedly.", exc_info=True)
+            logger.error("Something went wrong.", exc_info=True)
             await response_handler.emit_error(
                 "Something went wrong. Please try again later.",
                 details={"stage": "respond", "error_type": type(exc).__name__}
