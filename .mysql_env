@@ -1,0 +1,4 @@
+MYSQL_ROOT_PASSWORD=very_secret_root_password
+MYSQL_DATABASE=research_db
+MYSQL_USER=researcher_user
+MYSQL_PASSWORD=secure_app_password

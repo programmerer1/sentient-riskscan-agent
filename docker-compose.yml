@@ -1,0 +1,35 @@
+services:
+  risk-scan:
+    build: .
+    container_name: risk_scan
+    networks:
+      - risk-scan-network
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    volumes:
+      - ./src:/app/src
+
+  mysql:
+    image: mysql:8.0
+    container_name: risk_scan_mysql
+    networks:
+      - risk-scan-network
+    env_file:
+      - .mysql_env
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  db_data:
+
+
+networks:
+  risk-scan-network:
+    name: my-risk-scan-network
