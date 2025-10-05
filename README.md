@@ -15,6 +15,7 @@ cp .env.example .env
 cp .mysql_env.example .mysql_env
 # Fill in the env settings
 
+mkdir db_data
 docker compose -f docker-compose.yml up -d
 ```
 
