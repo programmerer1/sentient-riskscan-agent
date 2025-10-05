@@ -18,7 +18,7 @@ cp .mysql_env.example .mysql_env
 docker compose -f docker-compose.yml up -d
 ```
 
-** Example POST request to http://localhost:8000/assist: **
+**Example POST request to http://localhost:8000/assist:**
 ```bash
 {
     "session": 
