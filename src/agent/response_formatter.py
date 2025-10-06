@@ -90,11 +90,8 @@ Raw API Data:
 
         async with httpx.AsyncClient() as client:
             resp = await client.post(MODEL_API_URL, json=payload, headers=headers, timeout=30)
+            resp.raise_for_status()
             data = resp.json()
-
-            if "error" in data:
-                return "Unknown error"
-                logger.error(data)
         return (
             data.get("choices", [{}])[0]
                 .get("message", {})

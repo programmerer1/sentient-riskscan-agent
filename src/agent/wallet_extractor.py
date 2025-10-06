@@ -46,9 +46,8 @@ class WalletExtractor:
 
         async with httpx.AsyncClient() as client:
             resp = await client.post(EXTRACTOR_MODEL_API_URL, json=payload, headers=headers, timeout=30)
+            resp.raise_for_status()
             data = resp.json()
-            if "error" in data:
-                logger.error(data)
         try:
             content = (
                 data.get("choices", [{}])[0]
