@@ -14,6 +14,7 @@ class WalletExtractor:
             "role": "system",
             "content": SYSTEM_PROMPT_TEMPLATE.format(supported_networks=SUPPORTED_NETWORKS)
         }
+        
         payload = {
             "model": EXTRACTOR_MODEL_NAME,
             "max_tokens" : 500,
