@@ -41,7 +41,7 @@ class AnchainClient:
                         
                     filtered_activity = {
                         "description": activity.get("description"),
-                        "category": activity.get("category"), 
+                        "category": activity_category,
                         "transaction_count": activity.get("txn_cnt") 
                     }
 
