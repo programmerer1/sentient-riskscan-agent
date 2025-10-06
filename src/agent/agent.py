@@ -36,6 +36,7 @@ class Agent(AbstractAgent):
                 await response_handler.emit_error("Empty prompt", details={"field": "prompt"})
                 return
 
+            # Using the model, we extract the network name and wallet address from the user's request.
             address, network = await self.wallet_extractor.extract(prompt)
 
             if not address or not network:
