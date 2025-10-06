@@ -15,7 +15,7 @@ cd sentient-riskscan-agent
 
 cp .env.example .env
 cp .mysql_env.example .mysql_env
-# Fill in the env settings
+# You must configure the variables in the env files.
 
 mkdir db_data
 docker compose -f docker-compose.yml up -d
