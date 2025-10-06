@@ -1,10 +1,7 @@
 import httpx
 import json
 from .config import MODEL_API_URL, MODEL_NAME, MODEL_API_KEY
-import logging
 from datetime import datetime
-
-logger = logging.getLogger(__name__)
 
 class ResponseFormatter:
     async def format(self, network: str, address: str, result: dict, user_prompt: str) -> str:

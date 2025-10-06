@@ -1,9 +1,6 @@
 import json
 import httpx
 from .config import SUPPORTED_NETWORKS, EXTRACTOR_MODEL_API_URL, EXTRACTOR_MODEL_NAME, EXTRACTOR_MODEL_API_KEY
-import logging
-
-logger = logging.getLogger(__name__)
 
 class WalletExtractor:
     async def extract(self, prompt: str) -> tuple[str | None, str | None]:
