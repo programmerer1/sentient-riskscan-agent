@@ -65,7 +65,7 @@ then:
             "content": f"""
 Wallet Analysis Report
 
-User original query: {user_prompt};
+User's original query: {user_prompt};
 Network: {network};
 Address: {address};
 
