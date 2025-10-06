@@ -49,6 +49,7 @@ class AnchainClient:
                     
                 filtered_data["risk_activity"] = filtered_activities
             else:
-                filtered_data["address_description"] = "No suspicious transactions were detected on this wallet."
+                if original_data.get("risk_score") <= 50:
+                    filtered_data["address_description"] = "No suspicious transactions were detected on this wallet."
 
             return filtered_data
