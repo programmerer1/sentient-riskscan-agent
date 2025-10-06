@@ -1,5 +1,6 @@
 import json
 import logging
+import asyncio
 from typing import Any
 
 from sentient_agent_framework.interface.agent import AbstractAgent
@@ -49,15 +50,18 @@ class Agent(AbstractAgent):
             result = await self.mysql_cache.get(cache_key)
 
             if not result:
-                scorechain_result = await self.scorechain_client.check_wallet(address)
+                scorechain_result, chainalysis_result, anchain_result = await asyncio.gather(
+                    self.scorechain_client.check_wallet(address),
+                    self.chainalysis_client.check_wallet(address),
+                    self.anchain_client.check_wallet(network, address),
+                )
+                
                 if scorechain_result:
                     result['scorechain_data'] = scorechain_result
 
-                chainalysis_result = await self.chainalysis_client.check_wallet(address)
                 if chainalysis_result:
                     result['chainalysis_data'] = chainalysis_result
 
-                anchain_result = await self.anchain_client.check_wallet(network, address)
                 if anchain_result:
                     result['anchain_data'] = anchain_result
 
