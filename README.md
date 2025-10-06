@@ -1,4 +1,6 @@
-<p align="center"><img src="https://github.com/programmerer1/sentient-riskscan-agent/blob/main/logo.png" width="200" alt="logo"></p>
+<p align="center">
+    <img src="https://github.com/programmerer1/sentient-riskscan-agent/blob/main/logo.png" width="200" alt="logo">
+</p>
 
 **RiskScan** is an intelligent agent built on the [Sentient Agent Framework](https://github.com/sentient-agi/Sentient-Agent-Framework) for rapid blockchain risk assessment.
 
@@ -37,5 +39,11 @@ docker compose -f docker-compose.yml up -d
     }
 }
 ```
+
+**Response Example:**
+
+<p align="center">
+    <img src="https://github.com/programmerer1/sentient-riskscan-agent/blob/main/response-example.png" alt="logo">
+</p>
 
 
