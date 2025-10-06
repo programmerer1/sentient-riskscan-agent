@@ -13,7 +13,7 @@ class ResponseFormatter:
         
         system_instruction = {
             "role": "system",
-            "content": SYSTEM_PROMPT_TEMPLATE.format(datetime={datetime.utcnow().strftime('%Y-%m-%d')})
+            "content": SYSTEM_PROMPT_TEMPLATE.format(datetime=datetime.utcnow().strftime('%Y-%m-%d'))
         }
 
         user_message = {
