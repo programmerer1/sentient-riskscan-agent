@@ -8,8 +8,8 @@ class CorsDefaultServer(DefaultServer):
         super().__init__(agent)
         
         origins = self.parse_list_env("CORS_ORIGINS", "http://localhost:3000,http://localhost:8000")
-        methods = self.parse_list_env("CORS_METHODS", "*")
-        headers = self.parse_list_env("CORS_HEADERS", "*")
+        methods = self.parse_list_env("CORS_METHODS", "GET,POST,OPTIONS")
+        headers = self.parse_list_env("CORS_HEADERS", "Content-Type")
         credentials_env = os.getenv("CORS_CREDENTIALS", "True")
         credentials = credentials_env.lower() == 'true'
 
