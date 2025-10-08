@@ -19,7 +19,7 @@ class WalletExtractor:
             "model": EXTRACTOR_MODEL_NAME,
             "max_tokens" : 500,
             "top_p" : 1,
-            "top_k" : 40,
+            #"top_k" : 40,
             "presence_penalty" : 0,
             "frequency_penalty" : 0,
             "temperature" : 0.0,

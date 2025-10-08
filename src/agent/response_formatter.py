@@ -28,9 +28,9 @@ class ResponseFormatter:
 
         payload = {
             "model": MODEL_NAME,
-            "max_tokens" : 25000,
+            "max_tokens" : 8192,
             "top_p" : 1,
-            "top_k" : 40,
+            #"top_k" : 40,
             "presence_penalty" : 0,
             "frequency_penalty" : 0,
             "temperature" : 0.0,
