@@ -17,7 +17,7 @@ class WalletExtractor:
         
         payload = {
             "model": EXTRACTOR_MODEL_NAME,
-            "max_tokens" : 500,
+            "max_tokens" : 800,
             "top_p" : 1,
             #"top_k" : 40,
             "presence_penalty" : 0,
