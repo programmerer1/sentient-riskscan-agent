@@ -14,7 +14,7 @@ typing-inspection==0.4.0
 typing_extensions==4.13.2
 uvicorn==0.34.0
 httpx==0.28.1
-sentient-agent-framework==0.2.0
+sentient-agent-framework==0.3.0
 aiomysql==0.2.0
 python-dotenv==1.1.1
 cryptography==46.0.2
